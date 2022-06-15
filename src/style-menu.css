@@ -1,5 +1,6 @@
 :root {
     --orange: #fb8500;
+    --yellow: #ffb703;
     --dark-blue: #14213d;
     --light-blue: #219ebc;
     --brown: #dda15e;
@@ -101,10 +102,20 @@ body {
     text-decoration: none;
 }
 
+.menu-header {
+    justify-items: center;
+}
+
 .menu-cards {
     display: grid;
+    margin-top: calc(5rem + 5vw);
     justify-items: center;
 }
 
 .card {
+    color: #001d3d;
+    font-family: 'Farro';
+    font-size: 1.5rem;
 }
+
+/* TODO: MAKE CARDS AND FINISH GRID */
