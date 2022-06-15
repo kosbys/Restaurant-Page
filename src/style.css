@@ -31,7 +31,7 @@ body {
 #content {
     width: 100vw;
     height: 100vh;
-    background: url('./pancake-lowopacity.jpg') no-repeat center center fixed;
+    background: url('./pancake.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;

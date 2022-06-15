@@ -2,6 +2,7 @@
     --orange: #fb8500;
     --yellow: #ffb703;
     --dark-blue: #14213d;
+    --deep-blue: #22223b;
     --light-blue: #219ebc;
     --brown: #dda15e;
     --light-brown: #faedcd;
@@ -20,8 +21,20 @@
 }
 
 @font-face {
-    font-family: 'Farro';
-    src: url('./Farro.ttf') format('truetype');
+    font-family: 'Farro-Regular';
+    src: url('./Farro-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Farro-Light';
+    src: url('./Farro-Light.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Farro-Bold';
+    src: url('./Farro-Bold.ttf') format('truetype');
     font-style: normal;
 }
 
@@ -88,7 +101,7 @@ body {
 }
 
 .footer {
-    font-family: 'Farro';
+    font-family: 'Farro-Regular';
     margin-top: auto;
     text-align: center;
     background-color: var(--dark-blue);
@@ -97,25 +110,88 @@ body {
 }
 
 .footer > a {
-    font-family: 'Farro';
-    color: #dda15e;
+    font-family: 'Farro-Regular';
+    color: var(--brown);
     text-decoration: none;
 }
 
 .menu-header {
-    justify-items: center;
+    display: flex;
+    gap: 15px;
+    align-self: center;
+    margin-top: calc(1rem + 3vh);
+}
+
+.menu-header > img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.menu-header > span {
+    color: var(--dark-blue);
+    font-size: 5rem;
+    font-family: 'SansitaSwashed';
+    text-align: center;
+    text-decoration: underline;
 }
 
 .menu-cards {
     display: grid;
-    margin-top: calc(5rem + 5vw);
+    margin-top: calc(2rem + 3vw);
     justify-items: center;
 }
 
 .card {
-    color: #001d3d;
-    font-family: 'Farro';
-    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-areas: 'image' 'text';
+
+    border-radius: 18px;
+    background: var(--deep-blue);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-image {
+    grid-area: image;
+    background: url('./pancakes.jpg');
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: contain;
+}
+
+.card-text {
+    grid-area: text;
+    margin: 25px;
+}
+
+.card-text > h2 {
+    color: var(--yellow);
+    font-family: 'Farro-Bold';
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+.card-text > span {
+    color: var(--yellow);
+    font-family: 'Farro-Bold';
+    font-size: 1.7rem;
+}
+
+.card-text > p {
+    color: var(--light-brown);
+    font-family: 'Farro-Light';
+    font-size: 1rem;
 }
 
 /* TODO: MAKE CARDS AND FINISH GRID */
