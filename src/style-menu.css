@@ -137,8 +137,11 @@ body {
 
 .menu-cards {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
     margin-top: calc(2rem + 3vw);
     justify-items: center;
+    background-color: var(--light-brown);
 }
 
 .card {
@@ -158,11 +161,12 @@ body {
 }
 
 .card:hover {
+    background: #457b9d;
     transform: scale(1.05);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
-.card-image {
+.card-image#one {
     grid-area: image;
     background: url('./pancakes.jpg');
     border-top-left-radius: 15px;
@@ -176,20 +180,25 @@ body {
 }
 
 .card-text > h2 {
-    color: var(--yellow);
+    color: var(--orange);
     font-family: 'Farro-Bold';
     font-size: 1.7rem;
     margin: 0;
 }
 
+.card:hover h2 {
+    color: #2b2d42;
+    transition-duration: 1s;
+}
+
 .card-text > span {
-    color: var(--yellow);
+    color: var(--orange);
     font-family: 'Farro-Bold';
     font-size: 1.7rem;
 }
 
 .card-text > p {
-    color: var(--light-brown);
+    color: var(--yellow);
     font-family: 'Farro-Light';
     font-size: 1rem;
 }
