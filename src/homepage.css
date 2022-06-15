@@ -1,26 +1,25 @@
 :root {
     --orange: #fb8500;
-    --dark-blue: #023047;
+    --dark-blue: #14213d;
+    --light-blue: #219ebc;
+    --light-brown: #dda15e;
 }
 
 @font-face {
     font-family: 'SansitaSwashed';
     src: url('./SansitaSwashed.ttf') format('truetype');
-    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'JuliusSansOne';
     src: url('./JuliusSansOne-Regular.ttf') format('truetype');
-    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Farro';
     src: url('./Farro.ttf') format('truetype');
-    font-weight: 400;
     font-style: normal;
 }
 
@@ -28,10 +27,12 @@ body {
     margin: 0;
 }
 
-#content {
-    height: 100vh;
+.bg-img {
+    display: flex;
+    flex-direction: column;
     background: url('./pancake-lowopacity.jpg') no-repeat center center fixed;
     background-size: cover;
+    height: 100vh;
 }
 
 .header {
@@ -40,9 +41,9 @@ body {
     justify-content: space-evenly;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: var(--orange);
     background: var(--dark-blue);
-    box-shadow: 5px 10px 8px #131e24;
+    box-shadow: 5px 5px 8px var(--light-blue);
+    opacity: 0.9;
 }
 
 .links {
@@ -52,11 +53,18 @@ body {
     font-size: calc(1rem + 0.5vw);
 }
 
+.link > a {
+    text-decoration: none;
+    color: var(--orange);
+}
+
 .title {
+    color: var(--orange);
     font-size: calc(1rem + 1.5vw);
 }
 
 .welcome {
+    color: var(--light-brown);
     width: fit-content;
     height: fit-content;
     margin-top: 10vh;
@@ -65,18 +73,29 @@ body {
 
 .welcome > span {
     font-family: 'SansitaSwashed';
-    color: var(--orange);
     font-size: calc(3rem + 2vw);
     padding: calc(1rem + 1vw);
-    border-radius: 10px;
 }
 
 .welcome > p {
     font-family: 'SansitaSwashed';
-    color: var(--orange);
     font-size: calc(2rem + 0.5vw);
     padding-left: calc(1rem + 1vw);
     text-align: center;
-    border-radius: 10px;
     width: 55%;
+}
+
+.footer {
+    font-family: 'Farro';
+    margin-top: auto;
+    text-align: center;
+    background-color: var(--dark-blue);
+    color: var(--orange);
+    border-top: 3px solid var(--light-blue);
+}
+
+.footer > a {
+    font-family: 'Farro';
+    color: #dda15e;
+    text-decoration: none;
 }
