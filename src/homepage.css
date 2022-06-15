@@ -1,3 +1,8 @@
+:root {
+    --orange: #fb8500;
+    --dark-blue: #023047;
+}
+
 @font-face {
     font-family: 'SansitaSwashed';
     src: url('./SansitaSwashed.ttf') format('truetype');
@@ -6,37 +11,72 @@
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('./Roboto.ttf') format('truetype');
+    font-family: 'JuliusSansOne';
+    src: url('./JuliusSansOne-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Farro';
+    src: url('./Farro.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 body {
     margin: 0;
-    background: url('./pancakes.jpg') no-repeat center center fixed;
+}
+
+#content {
+    height: 100vh;
+    background: url('./pancake-lowopacity.jpg') no-repeat center center fixed;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
 }
 
 .header {
-    font-family: 'SansitaSwashed';
+    font-family: 'JuliusSansOne';
     display: flex;
     justify-content: space-evenly;
     padding-top: 1rem;
-    padding-bottom: 0.7rem;
-    background-color: #023047;
-    color: #fb8500;
+    padding-bottom: 1rem;
+    color: var(--orange);
+    background: var(--dark-blue);
+    box-shadow: 5px 10px 8px #131e24;
 }
 
 .links {
     display: flex;
     align-items: center;
     gap: 7rem;
-    font-size: 2rem;
+    font-size: calc(1rem + 0.5vw);
 }
 
 .title {
-    font-size: 3rem;
+    font-size: calc(1rem + 1.5vw);
+}
+
+.welcome {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10vh;
+    margin-left: 15vw;
+}
+
+.welcome > span {
+    font-family: 'SansitaSwashed';
+    color: var(--orange);
+    font-size: calc(3rem + 2vw);
+    padding: calc(1rem + 1vw);
+    border-radius: 10px;
+}
+
+.welcome > p {
+    font-family: 'SansitaSwashed';
+    color: var(--orange);
+    font-size: calc(2rem + 0.5vw);
+    padding-left: calc(1rem + 1vw);
+    text-align: center;
+    border-radius: 10px;
+    width: 55%;
 }
