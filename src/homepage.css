@@ -1,25 +1,42 @@
-li {
-    list-style: none;
+@font-face {
+    font-family: 'SansitaSwashed';
+    src: url('./SansitaSwashed.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
-a {
-    text-decoration: none;
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
     margin: 0;
+    background: url('./pancakes.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
+    font-family: 'SansitaSwashed';
     display: flex;
     justify-content: space-evenly;
     padding-top: 1rem;
+    padding-bottom: 0.7rem;
+    background-color: #023047;
+    color: #fb8500;
 }
 
 .links {
     display: flex;
-    gap: 35px;
+    align-items: center;
+    gap: 7rem;
+    font-size: 2rem;
 }
 
 .title {
+    font-size: 3rem;
 }
