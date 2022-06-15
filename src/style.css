@@ -98,6 +98,6 @@ body {
 
 .footer > a {
     font-family: 'Farro';
-    color: #dda15e;
+    color: var(--brown);
     text-decoration: none;
 }

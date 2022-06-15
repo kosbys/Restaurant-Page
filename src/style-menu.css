@@ -3,7 +3,7 @@
     --dark-blue: #14213d;
     --light-blue: #219ebc;
     --brown: #dda15e;
-    --light-brown: #fefae0;
+    --light-brown: #faedcd;
 }
 
 @font-face {
@@ -33,7 +33,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--lighter-brown);
+    background-color: var(--light-brown);
 }
 
 .header {
@@ -99,4 +99,12 @@ body {
     font-family: 'Farro';
     color: #dda15e;
     text-decoration: none;
+}
+
+.menu-cards {
+    display: grid;
+    justify-items: center;
+}
+
+.card {
 }
