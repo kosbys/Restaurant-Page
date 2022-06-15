@@ -68,12 +68,17 @@ body {
     font-size: calc(1rem + 0.5vw);
 }
 
-.link > a {
+.link a {
     text-decoration: none;
     color: var(--orange);
 }
 
+.link:hover a {
+    color: var(--yellow);
+}
+
 .title {
+    user-select: none;
     color: var(--orange);
     font-size: calc(1rem + 1.5vw);
 }
@@ -205,4 +210,4 @@ body {
     font-size: 1rem;
 }
 
-/* TODO: MAKE CARDS AND FINISH GRID */
+/* TODO: ADD MORE CARDS AND ADD MEDIA QUERIES */
