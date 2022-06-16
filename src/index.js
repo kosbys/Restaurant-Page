@@ -58,6 +58,13 @@ let currentPage = '';
     content.appendChild(footer);
 })();
 
+function resetLinks() {
+    const links = document.getElementsByClassName('link');
+    for (let i = 0; i < links.length; i += 1) {
+        links[i].firstChild.style.color = 'var(--orange)';
+    }
+}
+
 function changetoHome() {
     if (currentPage === 'home') {
         return;
@@ -65,6 +72,10 @@ function changetoHome() {
     if (document.getElementsByClassName('container')[0]) {
         document.getElementsByClassName('container')[0].remove();
     }
+
+    resetLinks();
+    const link = document.getElementById('home').firstChild;
+    link.style.color = 'var(--green)';
 
     const home = homepage();
 
@@ -85,6 +96,11 @@ function changetoMenu() {
     content.style.background = null;
 
     const menuPage = menu();
+
+    resetLinks();
+
+    const link = document.getElementById('menu').firstChild;
+    link.style.color = 'var(--green)';
 
     content.insertBefore(menuPage, content.lastChild);
     currentPage = 'menu';
