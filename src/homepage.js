@@ -5,12 +5,12 @@ function homepage() {
     const title = document.createElement('span');
     title.id = 'hero-title';
     title.innerText = 'Fresh and Decadent';
+
     const text = document.createElement('span');
     text.id = 'hero-text';
     text.innerText = 'These pancakes are the best treat for you and your family!';
 
     const welcome = document.createElement('div');
-
     welcome.classList.add('welcome');
     welcome.appendChild(title);
     welcome.appendChild(document.createElement('br'));

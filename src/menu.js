@@ -1,10 +1,8 @@
+import menuData from './menu.json' assert { type: 'json' };
+
 class MenuCard {
-    constructor(name, price, salePrice, description, image) {
-        this.name = name;
-        this.price = price;
-        this.salePrice = salePrice;
-        this.description = description;
-        this.image = image;
+    constructor(data = {}) {
+        Object.assign(this, data);
     }
 }
 
@@ -16,3 +14,7 @@ function menu() {
 }
 
 export default menu;
+
+const x = new MenuCard({ name: 'Pancakes', price: '$ 5.99', description: 'The best pancakes ever!' });
+
+console.log(x);
