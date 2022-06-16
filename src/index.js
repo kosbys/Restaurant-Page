@@ -49,7 +49,7 @@ import PancakeBackGround from './pancake.jpg';
     content.appendChild(home);
 })();
 
-(function initializeHeader() {
+(function initializeFooter() {
     const content = document.getElementById('content');
     const footer = document.createElement('div');
     footer.classList.add('footer');

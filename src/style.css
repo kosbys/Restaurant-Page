@@ -265,6 +265,8 @@ span.sale-new {
     color: var(--green);
 }
 
+/* || Contact */
+
 .contact-container {
     display: flex;
     flex-wrap: wrap;
