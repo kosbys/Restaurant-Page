@@ -1,4 +1,4 @@
-import menuData from './menu.json' assert { type: 'json' };
+const menuData = require('./menu.json');
 
 class MenuCard {
     constructor(data = {}) {
@@ -14,7 +14,3 @@ function menu() {
 }
 
 export default menu;
-
-const x = new MenuCard({ name: 'Pancakes', price: '$ 5.99', description: 'The best pancakes ever!' });
-
-console.log(x);
