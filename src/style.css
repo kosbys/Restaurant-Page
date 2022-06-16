@@ -254,14 +254,14 @@ body {
     font-size: 1rem;
 }
 
-span.sale {
+span.sale-tag {
     text-decoration: line-through;
     padding-right: 0.5rem;
     color: var(--light-pink);
     opacity: 0.5;
 }
 
-span.sale-new {
+span.sale {
     color: var(--green);
 }
 

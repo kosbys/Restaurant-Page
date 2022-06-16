@@ -1,4 +1,5 @@
 import homepage from './homepage';
+import menu from './menu';
 import './style.css';
 import PancakeBackGround from './pancake.jpg';
 
@@ -16,12 +17,12 @@ import PancakeBackGround from './pancake.jpg';
 
     const home = document.createElement('div');
     home.id = 'home';
-    const menu = document.createElement('div');
-    menu.id = 'menu';
+    const menuAnchor = document.createElement('div');
+    menuAnchor.id = 'menu';
     const contact = document.createElement('div');
     contact.id = 'contact';
 
-    const linksArray = [home, menu, contact];
+    const linksArray = [home, menuAnchor, contact];
 
     linksArray.forEach((element) => {
         const link = element;
@@ -44,6 +45,7 @@ import PancakeBackGround from './pancake.jpg';
 
 (function initializeHome() {
     const content = document.getElementById('content');
+
     const home = homepage();
 
     content.style = `background: url(${PancakeBackGround}); background-size: cover;`;
@@ -64,3 +66,14 @@ import PancakeBackGround from './pancake.jpg';
 
     content.appendChild(footer);
 })();
+
+function changetoMenu() {
+    const content = document.getElementById('content');
+    if (content.childNodes[1].class === 'container') {
+        content.removeChild(document.getElementsByClassName('container')[0]);
+    }
+
+    const menuPage = menu();
+
+    content.appendChild(menuPage);
+}

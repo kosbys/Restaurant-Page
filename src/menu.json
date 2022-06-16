@@ -5,42 +5,42 @@
             "price": "5.99",
             "sale": "",
             "description": "Where it all began",
-            "image": "pancakes.jpg"
+            "image": "Pancakes"
         },
         {
             "name": "Donuts",
             "price": "8.99",
             "sale": "8.98",
             "description": "Holes sold separately",
-            "image": "donuts.jpg"
+            "image": "Donuts"
         },
         {
             "name": "Crêpe",
             "price": "6.99",
             "sale": "",
             "description": "Thinner than a pancake",
-            "image": "crepe.jpg"
+            "image": "Crepe"
         },
         {
             "name": "Blueberry Cheesecake",
             "price": "5.99",
             "sale": "4.99",
             "description": "Actually a custard pie",
-            "image": "cheesecake.jpg"
+            "image": "Cheesecake"
         },
         {
             "name": "Macarons",
             "price": "3.99",
             "sale": "",
             "description": "Tastes like macaroni",
-            "image": "macarons.jpg"
+            "image": "Macarons"
         },
         {
             "name": "Ice Cream",
             "price": "49.99",
             "sale": "2.99",
             "description": "May come melted",
-            "image": "ice-cream.jpg"
+            "image": "Ice-cream"
         }
     ]
 }
