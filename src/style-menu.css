@@ -4,6 +4,7 @@
     --dark-blue: #14213d;
     --deep-blue: #22223b;
     --light-blue: #219ebc;
+    --cold-blue: #457b9d;
     --brown: #dda15e;
     --light-brown: #faedcd;
 }
@@ -64,7 +65,7 @@ body {
 .links {
     display: flex;
     align-items: center;
-    gap: 7rem;
+    gap: calc(4rem + 1vh);
     font-size: calc(1rem + 0.5vw);
 }
 
@@ -112,6 +113,7 @@ body {
     background-color: var(--dark-blue);
     color: var(--orange);
     border-top: 3px solid var(--light-blue);
+    opacity: 0.9;
 }
 
 .footer > a {
@@ -122,19 +124,20 @@ body {
 
 .menu-header {
     display: flex;
-    gap: 15px;
     align-self: center;
+    place-items: center;
+    gap: 15px;
     margin-top: calc(1rem + 3vh);
 }
 
 .menu-header > img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: calc(2rem + 2vw);
+    max-height: calc(2rem + 2vw);
 }
 
 .menu-header > span {
     color: var(--dark-blue);
-    font-size: 5rem;
+    font-size: calc(2rem + 2vw);
     font-family: 'SansitaSwashed';
     text-align: center;
     text-decoration: underline;
@@ -166,14 +169,13 @@ body {
 }
 
 .card:hover {
-    background: #457b9d;
+    background: var(--cold-blue);
     transform: scale(1.05);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
-.card-image#one {
+.card-image {
     grid-area: image;
-    background: url('./pancakes.jpg');
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: contain;
@@ -192,7 +194,7 @@ body {
 }
 
 .card:hover h2 {
-    color: #2b2d42;
+    color: var(--deep-blue);
     transition-duration: 1s;
     text-decoration: underline;
     font-size: 2.2rem;
@@ -211,3 +213,30 @@ body {
 }
 
 /* TODO: ADD MORE CARDS AND ADD MEDIA QUERIES */
+
+@media screen and (max-width: 800px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .title {
+        place-self: center;
+        margin-bottom: calc(1rem + 1vh);
+    }
+
+    .links {
+        place-self: center;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .link a {
+        float: none;
+        width: 100%;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: calc(1rem + 1vh);
+    }
+}
