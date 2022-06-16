@@ -1,12 +1,14 @@
 :root {
     --orange: #fb8500;
     --yellow: #ffb703;
+    --brown: #dda15e;
+    --light-brown: #faedcd;
     --dark-blue: #14213d;
     --deep-blue: #22223b;
     --light-blue: #219ebc;
     --cold-blue: #457b9d;
-    --brown: #dda15e;
-    --light-brown: #faedcd;
+    --light-pink: #e7c6ff;
+    --green: #8ac926;
 }
 
 @font-face {
@@ -147,15 +149,16 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
-    margin-top: calc(2rem + 3vw);
+    margin-top: calc(2rem + 2vw);
+    padding-bottom: calc(2rem + 2vw);
     justify-items: center;
     background-color: var(--light-brown);
 }
 
 .card {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-areas: 'image' 'text';
 
     border-radius: 18px;
@@ -175,10 +178,12 @@ body {
 }
 
 .card-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     grid-area: image;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    background-size: contain;
 }
 
 .card-text {
@@ -212,6 +217,17 @@ body {
     font-size: 1rem;
 }
 
+span.sale {
+    text-decoration: line-through;
+    padding-right: 0.5rem;
+    color: var(--light-pink);
+    opacity: 0.5;
+}
+
+span.sale-new {
+    color: var(--green);
+}
+
 /* TODO: ADD MORE CARDS AND ADD MEDIA QUERIES */
 
 @media screen and (max-width: 800px) {
@@ -238,5 +254,11 @@ body {
     .links {
         flex-direction: column;
         gap: calc(1rem + 1vh);
+    }
+}
+
+@media screen and (max-width: 3000px) {
+    .menu-cards {
+        grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     }
 }
