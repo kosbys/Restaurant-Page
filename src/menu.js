@@ -13,4 +13,7 @@ function menu() {
     return container;
 }
 
-export default menu;
+menuData.menu.forEach((card) => {
+    const menuItem = new MenuCard(card);
+    console.log(menuItem);
+});
