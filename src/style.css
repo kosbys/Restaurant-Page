@@ -86,10 +86,10 @@ body {
     align-items: center;
     gap: calc(4rem + 1vh);
     font-size: calc(1rem + 0.5vw);
-    cursor: pointer;
 }
 
 .link a {
+    cursor: pointer;
     text-decoration: none;
     color: var(--orange);
 }

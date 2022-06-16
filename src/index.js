@@ -6,6 +6,7 @@ import PancakeBackGround from './pancake.jpg';
 // TODO: ADD CARD INFO YAML/TOML AND FINISH MENU SCRIPT
 
 const content = document.getElementById('content');
+let currentPage = '';
 
 (function initializeHeader() {
     const header = document.createElement('div');
@@ -57,6 +58,9 @@ const content = document.getElementById('content');
 })();
 
 function changetoHome() {
+    if (currentPage === 'home') {
+        return;
+    }
     if (document.getElementsByClassName('container')[0]) {
         document.getElementsByClassName('container')[0].remove();
     }
@@ -66,9 +70,13 @@ function changetoHome() {
     content.style = `background: url(${PancakeBackGround}); background-size: cover;`;
 
     content.insertBefore(home, content.lastChild);
+    currentPage = 'home';
 }
 
 function changetoMenu() {
+    if (currentPage === 'menu') {
+        return;
+    }
     if (document.getElementsByClassName('container')[0]) {
         document.getElementsByClassName('container')[0].remove();
     }
@@ -78,9 +86,10 @@ function changetoMenu() {
     const menuPage = menu();
 
     content.insertBefore(menuPage, content.lastChild);
+    currentPage = 'menu';
 }
 
-(function initializeHome() {
+(function NavigationListeners() {
     const links = document.getElementsByClassName('links')[0];
     Array.from(links.childNodes).forEach((link) => {
         link.addEventListener('click', (e) => {
@@ -92,3 +101,5 @@ function changetoMenu() {
         });
     });
 })();
+
+changetoHome();
