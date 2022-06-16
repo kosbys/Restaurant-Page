@@ -43,6 +43,7 @@
 
 body {
     margin: 0;
+    background-color: var(--light-brown);
 }
 
 #content {
@@ -50,7 +51,6 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--light-brown);
 }
 
 .container {
@@ -150,6 +150,7 @@ body {
     font-family: 'SansitaSwashed';
     text-align: center;
     text-decoration: underline;
+    padding-bottom: calc(2rem + 1vh);
 }
 
 /* || Menu */
@@ -251,13 +252,52 @@ span.sale-new {
     color: var(--green);
 }
 
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    gap: calc(5rem + 5vh);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    padding: calc(1rem + 1vw);
+    place-self: center;
+    background-color: var(--dark-blue);
+    margin: calc(1rem + 3vh);
+    border-radius: 35px;
+    gap: 1rem;
+}
+
+.phone {
+    font-size: 3vh;
+    font-family: 'JuliusSansOne';
+    color: var(--orange);
+}
+
+.iframe-container {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 /* || FORM */
 
 .contact-form {
     display: flex;
     place-self: center;
-    margin-top: calc(0.5rem + 1vw);
     padding: calc(1rem + 2vw);
+    margin: calc(1rem + 2vh);
     background-color: var(--deep-blue);
     border-radius: 25px;
 }
