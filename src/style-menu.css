@@ -58,6 +58,8 @@ body {
     flex-direction: column;
 }
 
+/* || Header */
+
 .header {
     font-family: 'JuliusSansOne';
     display: flex;
@@ -91,6 +93,8 @@ body {
     font-size: calc(1rem + 1.5vw);
 }
 
+/* || Homepage */
+
 .welcome {
     color: var(--brown);
     width: fit-content;
@@ -113,6 +117,8 @@ body {
     width: 55%;
 }
 
+/* || Footer */
+
 .footer {
     font-family: 'Farro-Regular';
     margin-top: auto;
@@ -129,13 +135,24 @@ body {
     text-decoration: none;
 }
 
-.menu-header {
+.menu-header,
+.contact-header {
     display: flex;
     align-self: center;
     place-items: center;
     gap: 15px;
     margin-top: calc(1rem + 3vh);
 }
+
+.contact-header > span {
+    color: var(--dark-blue);
+    font-size: calc(2rem + 2vw);
+    font-family: 'SansitaSwashed';
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* || Menu */
 
 .menu-header > img {
     max-width: calc(2rem + 2vw);
@@ -163,8 +180,8 @@ body {
 
 .card {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 600px));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 400px));
     grid-template-areas: 'image' 'text';
 
     border-radius: 18px;
@@ -234,7 +251,69 @@ span.sale-new {
     color: var(--green);
 }
 
-/* TODO: ADD MORE CARDS AND ADD MEDIA QUERIES */
+/* || FORM */
+
+.contact-form {
+    display: flex;
+    place-self: center;
+    margin-top: calc(0.5rem + 1vw);
+    padding: calc(1rem + 2vw);
+    background-color: var(--deep-blue);
+    border-radius: 25px;
+}
+
+form {
+    max-width: 420px;
+    margin: 50px auto;
+}
+
+.feedback-input {
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #cc6666;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.feedback-input:focus {
+    border: 2px solid #cc4949;
+}
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+[type='submit'] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: #cc6666;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+}
+[type='submit']:hover {
+    background: #cc4949;
+}
+
+/* || Media Queries */
 
 @media screen and (max-width: 800px) {
     .header {
