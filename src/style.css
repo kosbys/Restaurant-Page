@@ -281,16 +281,15 @@ span.sale {
     display: flex;
     flex-wrap: wrap;
     place-content: center;
-    gap: calc(5rem + 5vh);
 }
 
 .contact-details {
     display: flex;
+    margin-bottom: 1rem;
     flex-direction: column;
     padding: calc(1rem + 1vw);
     place-self: center;
     background-color: var(--dark-blue);
-    margin: calc(1rem + 3vh);
     border-radius: 35px;
     gap: 1rem;
 }
@@ -333,8 +332,8 @@ span.sale {
 .contact-form {
     display: flex;
     place-self: center;
-    padding: calc(1rem + 2vw);
-    margin: calc(1rem + 2vh);
+    padding: calc(1rem + 1vw);
+    margin: calc(1rem + 1vh);
     background-color: var(--deep-blue);
     border-radius: 25px;
 }

@@ -1,12 +1,24 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
-    output: {
-        filename: 'main.js',
-        path: path.resolve(__dirname, 'dist'),
+    entry: {
+        index: './src/index.js',
+        home: './src/home.js',
+        menu: './src/menu.js',
+        contact: './src/contact.js',
     },
+    output: {
+        filename: '[name].main.js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Pancake Shoppe',
+        }),
+    ],
     module: {
         rules: [
             {

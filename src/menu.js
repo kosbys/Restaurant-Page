@@ -56,16 +56,15 @@ function menu() {
         const image = document.createElement('div');
 
         image.classList.add('card-image');
-
         image.style.backgroundImage = `url(${backgrounds[i]})`;
-        // url(${PancakeBackGround});
-
         item.appendChild(image);
 
         const text = document.createElement('div');
         text.classList.add('card-text');
+
         const name = document.createElement('h2');
         name.innerText = menuItem.name;
+
         const price = document.createElement('span');
         price.innerText = `$ ${menuItem.price}`;
 

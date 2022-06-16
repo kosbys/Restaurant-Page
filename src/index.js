@@ -1,11 +1,12 @@
-import homepage from './homepage';
+import homepage from './home';
 import menu from './menu';
 import './style.css';
 import PancakeBackGround from './pancake.jpg';
 
-// TODO: ADD CARD INFO YAML/TOML AND FINISH MENU SCRIPT
+const content = document.createElement('div');
+content.id = 'content';
+document.getElementsByTagName('body')[0].appendChild(content);
 
-const content = document.getElementById('content');
 let currentPage = '';
 
 (function initializeHeader() {
