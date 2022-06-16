@@ -270,10 +270,22 @@ span.sale-new {
     gap: 1rem;
 }
 
-.phone {
-    font-size: 3vh;
+.phone,
+.work-times {
+    font-size: 1.2rem;
     font-family: 'JuliusSansOne';
     color: var(--orange);
+    line-height: 2.5rem;
+}
+
+#o {
+    padding-left: 42px;
+}
+
+#phone-icon,
+#clock-icon {
+    max-width: 35px;
+    max-height: 35px;
 }
 
 .iframe-container {
