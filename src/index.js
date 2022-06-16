@@ -5,8 +5,9 @@ import PancakeBackGround from './pancake.jpg';
 
 // TODO: ADD CARD INFO YAML/TOML AND FINISH MENU SCRIPT
 
+const content = document.getElementById('content');
+
 (function initializeHeader() {
-    const content = document.getElementById('content');
     const header = document.createElement('div');
     header.classList.add('header');
     const title = document.createElement('div');
@@ -32,7 +33,6 @@ import PancakeBackGround from './pancake.jpg';
         anchor.id = link.id;
 
         link.classList.add('link');
-        link.removeAttribute('id');
         link.appendChild(anchor);
         links.appendChild(link);
     });
@@ -43,18 +43,7 @@ import PancakeBackGround from './pancake.jpg';
     content.appendChild(header);
 })();
 
-(function initializeHome() {
-    const content = document.getElementById('content');
-
-    const home = homepage();
-
-    content.style = `background: url(${PancakeBackGround}); background-size: cover;`;
-
-    content.appendChild(home);
-})();
-
 (function initializeFooter() {
-    const content = document.getElementById('content');
     const footer = document.createElement('div');
     footer.classList.add('footer');
     const anchor = document.createElement('a');
@@ -67,13 +56,39 @@ import PancakeBackGround from './pancake.jpg';
     content.appendChild(footer);
 })();
 
-function changetoMenu() {
-    const content = document.getElementById('content');
-    if (content.childNodes[1].class === 'container') {
-        content.removeChild(document.getElementsByClassName('container')[0]);
+function changetoHome() {
+    if (document.getElementsByClassName('container')[0]) {
+        document.getElementsByClassName('container')[0].remove();
     }
+
+    const home = homepage();
+
+    content.style = `background: url(${PancakeBackGround}); background-size: cover;`;
+
+    content.insertBefore(home, content.lastChild);
+}
+
+function changetoMenu() {
+    if (document.getElementsByClassName('container')[0]) {
+        document.getElementsByClassName('container')[0].remove();
+    }
+
+    content.style.background = null;
 
     const menuPage = menu();
 
-    content.appendChild(menuPage);
+    content.insertBefore(menuPage, content.lastChild);
 }
+
+(function initializeHome() {
+    const links = document.getElementsByClassName('links')[0];
+    Array.from(links.childNodes).forEach((link) => {
+        link.addEventListener('click', (e) => {
+            if (e.target.id === 'home') {
+                changetoHome();
+            } else if (e.target.id === 'menu') {
+                changetoMenu();
+            }
+        });
+    });
+})();
