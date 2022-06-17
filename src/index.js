@@ -1,5 +1,6 @@
 import homepage from './home';
 import menu from './menu';
+import contact from './contact';
 import './style.css';
 import PancakeBackGround from './pancake.jpg';
 
@@ -18,14 +19,14 @@ let currentPage = '';
     const links = document.createElement('div');
     links.classList.add('links');
 
-    const home = document.createElement('div');
-    home.id = 'home';
+    const homeAnchor = document.createElement('div');
+    homeAnchor.id = 'home';
     const menuAnchor = document.createElement('div');
     menuAnchor.id = 'menu';
-    const contact = document.createElement('div');
-    contact.id = 'contact';
+    const contactAnchor = document.createElement('div');
+    contactAnchor.id = 'contact';
 
-    const linksArray = [home, menuAnchor, contact];
+    const linksArray = [homeAnchor, menuAnchor, contactAnchor];
 
     linksArray.forEach((element) => {
         const link = element;
@@ -106,7 +107,26 @@ function changetoMenu() {
     currentPage = 'menu';
 }
 
-function changetoContact() {}
+function changetoContact() {
+    if (currentPage === 'contact') {
+        return;
+    }
+    if (document.getElementsByClassName('container')[0]) {
+        document.getElementsByClassName('container')[0].remove();
+    }
+
+    content.style.background = null;
+
+    const contactPage = contact();
+
+    resetLinks();
+
+    const link = document.getElementById('contact').firstChild;
+    link.id = 'current-page';
+
+    content.insertBefore(contactPage, content.lastChild);
+    currentPage = 'contact';
+}
 
 (function NavigationListeners() {
     const links = document.getElementsByClassName('links')[0];
