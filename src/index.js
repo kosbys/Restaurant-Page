@@ -61,7 +61,7 @@ let currentPage = '';
 function resetLinks() {
     const links = document.getElementsByClassName('link');
     for (let i = 0; i < links.length; i += 1) {
-        links[i].firstChild.style.color = 'var(--orange)';
+        links[i].firstChild.removeAttribute('id');
     }
 }
 
@@ -75,7 +75,7 @@ function changetoHome() {
 
     resetLinks();
     const link = document.getElementById('home').firstChild;
-    link.style.color = 'var(--green)';
+    link.id = 'current-page';
 
     const home = homepage();
 
@@ -100,20 +100,24 @@ function changetoMenu() {
     resetLinks();
 
     const link = document.getElementById('menu').firstChild;
-    link.style.color = 'var(--green)';
+    link.id = 'current-page';
 
     content.insertBefore(menuPage, content.lastChild);
     currentPage = 'menu';
 }
 
+function changetoContact() {}
+
 (function NavigationListeners() {
     const links = document.getElementsByClassName('links')[0];
     Array.from(links.childNodes).forEach((link) => {
         link.addEventListener('click', (e) => {
-            if (e.target.id === 'home') {
+            if (e.target.innerText === 'home') {
                 changetoHome();
-            } else if (e.target.id === 'menu') {
+            } else if (e.target.innerText === 'menu') {
                 changetoMenu();
+            } else if (e.target.innerText === 'contact') {
+                changetoContact();
             }
         });
     });

@@ -98,6 +98,10 @@ body {
     color: var(--yellow);
 }
 
+#current-page {
+    color: var(--green);
+}
+
 .title {
     user-select: none;
     color: var(--orange);
